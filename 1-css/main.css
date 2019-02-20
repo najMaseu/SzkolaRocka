@@ -1,0 +1,972 @@
+@charset "UTF-8";
+@import url(/js/fullcalendar.css);
+/* RESET*/
+* {
+  box-sizing: border-box; }
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: "Lato";
+  color: white;
+  background-color: #2F2F2F;
+  background-image: url("/img/audience-celebration-concert-1190297.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+/* SCROLLING BEHAVIOR*/
+html {
+  scroll-behavior: smooth; }
+
+/*NAVBAR*/
+#navbar {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1em;
+  width: 100vw;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: center;
+  background-color: rgba(0, 0, 0, 0.5); }
+  #navbar ul {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px; }
+    #navbar ul li {
+      padding: 2px; }
+  #navbar a {
+    text-decoration: none;
+    text-align: center;
+    color: white; }
+
+/*Main screen*/
+#main {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 85vh; }
+  #main #titlewrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  #main #title {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 40px; }
+  #main #subtitle {
+    color: white;
+    text-align: center;
+    font-weight: regular;
+    font-size: 1.2em;
+    margin-top: 20px; }
+
+.button {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  border: solid 5px white;
+  padding: 14px;
+  max-width: 160px; }
+
+/*O NAS*/
+#about {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-around; }
+  #about #abouttitle {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 5vh 0; }
+  #about p {
+    color: white;
+    text-align: center;
+    font-weight: regular;
+    font-size: 1.5em;
+    margin: 5vh 0;
+    width: 90vw; }
+  #about a {
+    margin: 5vh 0; }
+
+/*STUDIO*/
+#studio {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between; }
+  #studio #mainwrapperstudio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    #studio #mainwrapperstudio h1 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 3em;
+      margin: 20px 0; }
+    #studio #mainwrapperstudio p {
+      color: white;
+      text-align: center;
+      font-weight: regular;
+      font-size: 1.5em;
+      margin-bottom: 8vh;
+      width: 90vw; }
+  #studio h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    margin: 2vh 0; }
+  #studio #gear {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2vw 10vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 1.2rem; }
+    #studio #gear .dispoff {
+      display: block; }
+    #studio #gear h4 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: regular;
+      font-size: 1em;
+      text-align: left;
+      margin: 0; }
+    #studio #gear #mics {
+      list-style: initial;
+      list-style-position: inside;
+      margin: 20px 0; }
+      #studio #gear #mics li {
+        color: white;
+        text-align: center;
+        font-weight: regular;
+        font-size: 1em;
+        text-align: left; }
+    #studio #gear #DI {
+      color: white;
+      text-align: center;
+      font-weight: regular;
+      font-size: 1em;
+      text-align: left; }
+    #studio #gear p {
+      margin-bottom: 2vh; }
+    #studio #gear ul {
+      margin: 2vh 0; }
+    #studio #gear a {
+      align-self: center;
+      margin: 2vh 0; }
+
+.dispoff {
+  display: none; }
+
+#rehersal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh; }
+  #rehersal #actioncallreh,
+  #rehersal #rehdesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  #rehersal b {
+    font-weight: bolder; }
+  #rehersal h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 20px 0; }
+  #rehersal p {
+    color: white;
+    text-align: center;
+    font-weight: regular;
+    font-size: 1.2em;
+    margin: 2vh 0;
+    width: 90vw; }
+  #rehersal h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 5vh 0 0; }
+  #rehersal ul {
+    width: 90%;
+    margin: 2vh 0; }
+    #rehersal ul li {
+      margin: 10px 0; }
+  #rehersal h2 {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 2vh 0 3vh; }
+
+#education {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  #education h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2.5em;
+    margin: 2vh 0; }
+  #education h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: left;
+    margin: 4vh 0 1vh; }
+  #education #musicPrice {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 85vw; }
+    #education #musicPrice h2 {
+      color: white;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 3em;
+      margin: 4vh 0; }
+  #education #studioPrice {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2vh 7.5vw; }
+    #education #studioPrice h2 {
+      color: white;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 3em;
+      margin-top: 4vh; }
+    #education #studioPrice #astr {
+      color: white;
+      text-align: center;
+      font-weight: regular;
+      font-size: 0.9em;
+      text-align: center; }
+  #education #rehersalPrice {
+    width: 85vw;
+    display: flex;
+    flex-direction: column; }
+    #education #rehersalPrice p {
+      margin: 3vh 0; }
+    #education #rehersalPrice #rehPriceLit {
+      display: flex;
+      justify-content: space-between;
+      margin: 4vh 0; }
+    #education #rehersalPrice div p {
+      color: white;
+      text-align: center;
+      font-weight: regular;
+      font-size: 1.3em;
+      text-align: left;
+      margin: 1vh 0; }
+    #education #rehersalPrice div h2 {
+      color: white;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 3em; }
+
+#teachers {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  #teachers h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 4vh 0; }
+  #teachers .teacherclass-1 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-1 .teacherimg {
+      background-image: url("/Img/Dariusz-Henczel-perkusja.jpeg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-1 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-1 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-1 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-2 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-2 .teacherimg {
+      background-image: url("/Img/Barbara-Z-Wokal.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-2 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-2 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-2 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-3 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-3 .teacherimg {
+      background-image: url("/Img/Dariusz-Świechowski-perkusja-1.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-3 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-3 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-3 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-4 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-4 .teacherimg {
+      background-image: url("/Img/Luis-Nubiola-sax.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-4 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-4 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-4 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-5 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-5 .teacherimg {
+      background-image: url("/Img/Magda-Hamer-Wokal.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-5 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-5 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-5 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-6 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-6 .teacherimg {
+      background-image: url("/Img/Michał-Stawarski-piano.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-6 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-6 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-6 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-7 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-7 .teacherimg {
+      background-image: url("/Img/Piotr-Czechowski-cajon.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-7 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-7 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-7 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-8 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-8 .teacherimg {
+      background-image: url("/Img/Robertbielak-skrzypce.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-8 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-8 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-8 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-9 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-9 .teacherimg {
+      background-image: url("/Img/SebastianLewicki-saksofon.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-9 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-9 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-9 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-10 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-10 .teacherimg {
+      background-image: url("/Img/sebastianwojnowski-bas.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-10 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-10 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-10 .teachcontent p {
+        margin: 10px 0; }
+  #teachers .teacherclass-11 {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px; }
+    #teachers .teacherclass-11 .teacherimg {
+      background-image: url("/Img/Nikodem-Kaczor-piano.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+      margin: 0; }
+    #teachers .teacherclass-11 h3 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 30px 0; }
+    #teachers .teacherclass-11 .teachcontent {
+      width: 90%;
+      -webkit-transition: max-height 0.5s;
+      -moz-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+      #teachers .teacherclass-11 .teachcontent p {
+        margin: 10px 0; }
+
+.open {
+  max-height: 1000px;
+  overflow: auto; }
+
+.closed {
+  max-height: 100px;
+  overflow: hidden; }
+
+.more {
+  width: 50vw;
+  margin: 30px 5px; }
+
+#calendarsec {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 90vh; }
+  #calendarsec h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    margin: 10px 0; }
+
+#calendar {
+  width: 90vw;
+  margin: 10px 0 20px 0; }
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: flex-start; }
+  #contact h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: left;
+    margin: 10px 0 20px; }
+  #contact div {
+    margin: 10px 0; }
+  #contact p {
+    font-size: 1.3em; }
+  #contact div div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  #contact #tel::before {
+    content: "";
+    display: inline-block;
+    left: -1em;
+    top: 2px;
+    width: .9em;
+    height: .9em;
+    background-image: url("/Img/mobile-phone.png");
+    background-size: cover;
+    filter: invert(100%); }
+  #contact h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 30px 0;
+    text-align: left; }
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: .5em;
+  padding: 5px; }
+  footer a {
+    color: white;
+    text-align: center;
+    font-weight: regular;
+    font-size: 1em;
+    text-decoration: none;
+    color: white; }
+
+@media only screen and (min-width: 770px) {
+  #navbar {
+    position: fixed;
+    min-height: 2vh;
+    left: 0;
+    top: 0; }
+    #navbar ul {
+      flex-direction: row;
+      margin: 10px;
+      width: 100%;
+      justify-content: space-around; }
+
+  #main {
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 50px; }
+    #main #titlewrapper {
+      margin: 30px 0 30px 10vw; }
+      #main #titlewrapper h1 {
+        width: 50vw;
+        text-align: left;
+        font-size: 3.5em; }
+      #main #titlewrapper h3 {
+        text-align: left;
+        font-size: 2em; }
+    #main a {
+      margin: 30px 0 30px 10vw; }
+
+  #about {
+    align-items: flex-start;
+    justify-content: center; }
+    #about p {
+      text-align: left;
+      width: 60vw; }
+    #about #abouttitle, #about p, #about a {
+      margin-left: 10vw; }
+
+  #studio {
+    min-height: 100vh;
+    flex-direction: row; }
+    #studio #mainwrapperstudio {
+      min-height: 70vh;
+      width: 60vw;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 0 4vw; }
+      #studio #mainwrapperstudio p {
+        text-align: left;
+        max-width: 100%; }
+      #studio #mainwrapperstudio .dispoff {
+        display: block; }
+    #studio #gear {
+      min-height: 70vh;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 4vw; }
+      #studio #gear h3 {
+        font-size: 1.3em; }
+      #studio #gear .dispoff {
+        display: none; }
+
+  #rehersal {
+    flex-direction: row;
+    justify-content: flex-start; }
+    #rehersal #rehdesc {
+      align-items: flex-start;
+      width: 50vw;
+      margin-left: 10vw; }
+      #rehersal #rehdesc p {
+        text-align: left;
+        width: 100%; }
+    #rehersal #actioncallreh {
+      margin-left: 10vw; }
+
+  #education {
+    flex-direction: row;
+    min-height: 100vh; }
+    #education #musicPrice, #education #studioPrice, #education #rehersalPrice {
+      display: flex;
+      flex-direction: column;
+      min-height: 80vh;
+      width: 33vw;
+      padding: 2vw;
+      justify-content: space-evenly; }
+
+  #teachers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 80px 0; }
+    #teachers h1 {
+      display: none; }
+
+  #calendarsec h1 {
+    color: rgba(0, 0, 0, 0); } }
+@media only screen and (min-width: 1800px) {
+  #musicPrice h3, #rehersalPrice h3, #studioPrice h3 {
+    font-size: 1.8rem; }
+  #musicPrice p, #rehersalPrice p, #studioPrice p {
+    font-size: 1.5rem; } }
+
+/*# sourceMappingURL=main.css.map */
